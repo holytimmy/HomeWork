@@ -18,11 +18,12 @@ namespace _5
             int n = Convert.ToInt32(Console.ReadLine());
 
             int[] array = new int[n];
+            Random random = new Random();
 
             for (int i = 0; i < n; i++)
             {
-                Console.WriteLine($"enter element of array {i + 1}:");
-                array[i] = Convert.ToInt32(Console.ReadLine());
+                array[i] = random.Next(-100,100);
+                Console.Write($"{array[i]}  ");
             }
 
             int max = int.MinValue;
@@ -33,7 +34,8 @@ namespace _5
                     max = array[i];
                 }
             }
-            Console.WriteLine($"Max element array:{max}");
+            Console.WriteLine(" ");
+            Console.WriteLine($" Max element array:{max}");
 
             int min = array.Min();
             Console.WriteLine($"Min element array:{min}");

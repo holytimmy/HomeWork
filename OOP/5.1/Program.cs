@@ -20,7 +20,7 @@ namespace _5._1
                 int ac = Convert.ToInt32(Console.ReadLine());
 
                 MyMatrix myMatrix = new MyMatrix(ar, ac);
-                myMatrix.MethArray(ar, ac);
+                myMatrix.MethodArray(ar, ac);
                 myMatrix.Print(ar, ac);
                 n++;
             }
