@@ -12,7 +12,7 @@ namespace _6._2
         {
             Console.WriteLine("Поиск строки : " + str);
         }
-        class Notes
+        public class Notes
         {
             private string text;
             public string Text { get { return text; } }
@@ -30,7 +30,7 @@ namespace _6._2
         {/*Расширьте пример урока 005_Delegation, создав в классе Book, вложенный класс Notes, который 
 позволит сохранять заметки читателя. */
 
-            Book.Notes notes = new Book.Notes.();
+            Book.Notes notes = new Book.Notes();
             notes.SaveText("monday");
 
             Console.ReadKey();
