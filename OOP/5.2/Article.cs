@@ -32,5 +32,10 @@ namespace _5._2
         {
             get { return price; }
         }
+
+        public override string ToString()
+        {
+            return $"Name: {name}, Market: {market}, Price: {price}";
+        }
     }
 }

@@ -34,32 +34,11 @@ namespace _5._2
             Console.WriteLine(store[1]);
             Console.WriteLine(store[2]);
             Console.WriteLine(store[3]);
-            //store.Print(a1, a2, a3, a4);
 
             Console.WriteLine("Enter product name:");
             string productName = Convert.ToString(Console.ReadLine());
-
-            if (productName == "milk")
-            {
-                Console.WriteLine("milk");
-            }
-            else if (productName == "cheese")
-            {
-                Console.WriteLine("cheese");
-            }
-            else if (productName == "broad")
-            {
-                Console.WriteLine("broad");
-            }
-            else if (productName == "water")
-            {
-                Console.WriteLine("water");
-            }
-            else
-            {
-                Console.WriteLine("Don't have product in the store");
-            }
-
+            store.ShowName(productName);
+            
             Console.ReadKey();
         }
     }

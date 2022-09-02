@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{48E71217-FD3A-47BB-BCB7-9E816EC3AAA0}</ProjectGuid>
+    <ProjectGuid>{8757EABB-D3D8-44BE-9AE3-04C88149C9EA}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>_7</RootNamespace>
-    <AssemblyName>7</AssemblyName>
+    <RootNamespace>_7._1</RootNamespace>
+    <AssemblyName>7.1</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -43,9 +43,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="MyClass.cs" />
+    <Compile Include="MyStruct.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Struct.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

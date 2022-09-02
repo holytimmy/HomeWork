@@ -11,19 +11,19 @@ namespace _5._1
             Написать программу, которая выводит на экран матрицу и производные от нее матрицы разных 
 порядков.             */
 
-            //int n = 0;
-            //while (n < 3)
-            //{
-                Console.Write($"Enter rows: ");
-                int ar = Convert.ToInt32(Console.ReadLine());
-                Console.Write($"Enter columns: ");
-                int ac = Convert.ToInt32(Console.ReadLine());
+            Console.Write($"Enter rows: ");
+            int ar = Convert.ToInt32(Console.ReadLine());
+            Console.Write($"Enter columns: ");
+            int ac = Convert.ToInt32(Console.ReadLine());
 
-                MyMatrix myMatrix = new MyMatrix(ar, ac);
-                //myMatrix.Fill(ar, ac);
-                myMatrix.Printer(ar, ac);
-               // n++;
-            //}
+            MyMatrix myMatrix = new MyMatrix(ar, ac);
+            MyMatrix.Fill(ar, ac);
+
+            Console.Write($"Enter new rows: ");
+            int R = Convert.ToInt32(Console.ReadLine());
+            Console.Write($"Enter new columns: ");
+            int C = Convert.ToInt32(Console.ReadLine());
+            MyMatrix.ChangeDimention(R, C);
 
             Console.ReadKey();
         }

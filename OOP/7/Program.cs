@@ -2,15 +2,6 @@
 
 namespace _7
 {
-    struct Train
-    {
-        string station;
-        string numberTrain;
-        string timeDeparture;
-        public string Station { get; set; }
-        public string NumberTrain { get; set; }
-        public string NumberDeparture { get; set; }
-    }
 
     internal class Program
     {
@@ -28,7 +19,7 @@ namespace _7
 
             for (int i = 0; i < transport.Length; i++)
             {
-                Console.WriteLine($"enter a name of train {i + 1}:");
+                Console.WriteLine($"enter a station of train {i + 1}:");
                 transport[i].Station = Convert.ToString(Console.ReadLine());
                 Console.WriteLine($"enter # of train {i + 1}:");
                 transport[i].NumberTrain = Convert.ToString(Console.ReadLine());
@@ -36,16 +27,18 @@ namespace _7
                 transport[i].NumberDeparture = Convert.ToString(Console.ReadLine());
             }
 
-            Console.WriteLine("enter number of train:");
-            int number = Convert.ToInt32(Console.ReadLine());
-            if (number > 0 && number < 8)
+            Console.WriteLine("enter name of train:");
+            string number = Convert.ToString(Console.ReadLine());
+            for (int i = 0; i < transport.Length; i++)
             {
-                int i = number - 1;
-                Console.WriteLine($"Station {transport[i].Station}, number{transport[i].NumberTrain},time departure{transport[i].NumberDeparture}");
-            }
-            else
-            {
-                Console.WriteLine("don'n number of train");
+                if (number == transport[i].NumberTrain)
+                {
+                    Console.WriteLine($"Station {transport[i].Station}, number{transport[i].NumberTrain},time departure{transport[i].NumberDeparture}");
+                }
+                else
+                {
+                    Console.WriteLine("don'n number of train");
+                }
             }
 
             Console.ReadKey();

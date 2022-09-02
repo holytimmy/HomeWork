@@ -16,13 +16,28 @@ namespace _5._2
             set { s[index] = value; }
         }
 
-        //public void Print(Article a1, Article a2, Article a3, Article a4)
-        //{
-        //    Article [] s = {a1, a2, a3, a4};
-        //    for (int i = 0; i < s.Length; i++)
-        //    {
-        //        Console.WriteLine(s[i]);
-        //    }
-        //}
+        public void ShowName(string productName)
+        {
+            if (productName == "milk")
+            {
+                Console.WriteLine("milk");
+            }
+            else if (productName == "cheese")
+            {
+                Console.WriteLine("cheese");
+            }
+            else if (productName == "broad")
+            {
+                Console.WriteLine("broad");
+            }
+            else if (productName == "water")
+            {
+                Console.WriteLine("water");
+            }
+            else
+            {
+                Console.WriteLine("Don't have product in the store");
+            }
+        }
     }
 }
