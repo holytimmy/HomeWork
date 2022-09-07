@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ConsoleApp1
 {
@@ -14,7 +10,15 @@ namespace ConsoleApp1
 экран строку заданным цветом. Используя перечисление, создайте набор цветов, доступных 
 пользователю. Ввод строки и выбор цвета предоставьте пользователю.*/
 
+            Console.WriteLine("enter text:");
+            string stroka = Convert.ToString(Console.ReadLine());
 
+            Console.WriteLine("enter number color for text from 1 to 7:");
+            int color = Convert.ToInt32(Console.ReadLine());
+
+            MyClass.Print(stroka, color);
+
+            Console.ReadKey();
         }
     }
 }

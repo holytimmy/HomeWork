@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace _8._2
 {
@@ -17,6 +13,15 @@ namespace _8._2
 давать или нет сотруднику премию. Если сотрудник отработал больше положеных часов в месяц, то ему 
 положена премия.*/
 
+            Accauntant accauntant = new Accauntant();
+            accauntant.AskForBonus(Post.director, 300);
+            accauntant.AskForBonus(Post.financeDirector, 150);
+            accauntant.AskForBonus(Post.driver, 50);
+            accauntant.AskForBonus(Post.engineer, 200);
+            accauntant.AskForBonus(Post.secretary, 200);
+            accauntant.AskForBonus(Post.manager, 350);
+
+            Console.ReadKey();
         }
     }
 }
