@@ -11,9 +11,18 @@ namespace _9._2
 
     internal class Program
     {
+        private static Random random = new Random();
+
         static int GetRandom()
         {
-            Random random = new Random();
+            // при таком подходе - на каждый вызов будет создан новый экземпляр класса.
+            // это затратно и не целесообразно.
+            // Можно вынести инициализацию на уровень выше (строка 14)
+            // и еще - Random реализован на основании времени. Если программа будет
+            //      создавать 2 экземпляра за очень короткий промежуток времени - метод Next будет возвращать одно и то же число
+            //      если же будет 1 экземпляр - будут генерироваться разные числа
+            //Random random = new Random();
+
             int number = random.Next(0, 50);
             return number;
         }
@@ -28,14 +37,12 @@ namespace _9._2
             int n = Convert.ToInt32(Console.ReadLine());
 
             var array = new MyDelegate[n];
-
             for (int i = 0; i < array.Length; i++)
             {
                 array[i] = GetRandom;
             }
 
             Console.WriteLine(new string('-', 50));
-
             for (int i = 0; i < array.Length; i++)
             {
                 Console.WriteLine(array[i]());
